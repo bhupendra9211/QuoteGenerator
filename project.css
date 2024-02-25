@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f40b;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #0cf0ca;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.quote {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+#darkModeToggle {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#darkModeToggle label {
+    margin-right: 10px;
+}
+
+#fontSizeToggle {
+    margin-top: 10px;
+}
