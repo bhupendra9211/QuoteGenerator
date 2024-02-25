@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
+            background-color: #f4f40b;
             color: #333;
             transition: background-color 0.3s, color 0.3s;
         }
@@ -16,9 +16,9 @@
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #0cf0ca;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 10px;
             transition: box-shadow 0.3s;
         }
 
@@ -60,6 +60,13 @@
     <div id="fontSizeToggle">
         <button onclick="changeFontSize('increase')">Increase Font Size</button>
         <button onclick="changeFontSize('decrease')">Decrease Font Size</button>
+    </div>
+    <div id="categoryDropdown">
+        <label for="categories">Select Category:</label>
+        <select id="categories" onchange="changeCategory()">
+            <option value="science">Science</option>
+            <option value="motivation">Motivation</option>
+        </select>
     </div>
     <div id="quote" class="quote"></div>
     <button onclick="prevQuote()">Previous</button>
@@ -113,6 +120,12 @@
 
     function randomQuote() {
         currentQuoteIndex = Math.floor(Math.random() * quotes[currentCategory].length);
+        displayQuote();
+    }
+
+    function changeCategory() {
+        currentCategory = document.getElementById('categories').value;
+        currentQuoteIndex = 0;
         displayQuote();
     }
 
